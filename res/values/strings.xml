@@ -9,5 +9,13 @@
     <string name="epee_str">Epee</string>
     <string name="saber_str">Saber</string>
     
-
+	<string-array name="bodypart_array">
+	    <item>Head</item>
+	    <item>Torso</item>
+	    <item>Waist</item>
+	    <item>Arm</item>
+	    <item>Leg</item>
+	    <item>Foot</item>
+	</string-array>
+	<string name="bpPrompt">Select a body part.</string>
 </resources>
