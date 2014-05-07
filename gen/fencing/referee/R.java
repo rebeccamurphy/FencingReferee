@@ -10,6 +10,7 @@ package fencing.referee;
 public final class R {
     public static final class array {
         public static final int bodypart_array=0x7f070000;
+        public static final int fencerepee_array=0x7f070001;
     }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -32,17 +33,20 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int BodyPartSpinner=0x7f090005;
+        public static final int BodyPartSpinner=0x7f090006;
+        public static final int FencerSpinner=0x7f090008;
         public static final int epee_btn=0x7f090002;
         public static final int foil_btn=0x7f090001;
         public static final int imageView1=0x7f090000;
+        public static final int quit_btn=0x7f090004;
         public static final int saber_btn=0x7f090003;
-        public static final int submit_btn=0x7f090006;
-        public static final int textView1=0x7f090004;
+        public static final int submit_btn=0x7f090007;
+        public static final int textView1=0x7f090005;
     }
     public static final class layout {
         public static final int activity_title=0x7f030000;
         public static final int body_part_select=0x7f030001;
+        public static final int fencer_prompt_epee=0x7f030002;
     }
     public static final class string {
         public static final int app_name=0x7f060000;
@@ -50,6 +54,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int dummy_button=0x7f060001;
         public static final int dummy_content=0x7f060002;
         public static final int epee_str=0x7f060004;
+        public static final int fePrompt=0x7f060007;
         public static final int foil_str=0x7f060003;
         public static final int saber_str=0x7f060005;
     }

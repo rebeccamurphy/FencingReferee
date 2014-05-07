@@ -14,8 +14,16 @@
 	    <item>Torso</item>
 	    <item>Waist</item>
 	    <item>Arm</item>
+	    <item>Hand</item>
 	    <item>Leg</item>
 	    <item>Foot</item>
 	</string-array>
 	<string name="bpPrompt">Select a body part.</string>
+	
+	<string-array name="fencerepee_array">
+	    <item>Right Fencer</item>
+	    <item>Left Fencer</item>
+	    <item>Both hit at same time</item>
+	</string-array>
+	<string name="fePrompt">Select a fencer.</string>
 </resources>

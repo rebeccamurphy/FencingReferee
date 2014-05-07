@@ -32,4 +32,18 @@
         android:layout_height="wrap_content"
         android:text="@string/saber_str" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/quit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="Quit" />
+
+    </RelativeLayout>
+
 </LinearLayout>

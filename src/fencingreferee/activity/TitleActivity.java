@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 public class TitleActivity extends Activity {
 	
-	private Button btnFoil, btnEpee, btnSaber;
+	private Button btnFoil, btnEpee, btnSaber, btnQuit;
 	private OnClickListener notAvail = new OnClickListener(){
 		@Override
 		public void onClick(View v){
@@ -34,7 +34,7 @@ public class TitleActivity extends Activity {
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.activity_title);
-
+		fencing.referee.data.MatchInfo.reset();
 		addListenerOnButtons();
 	}
 	
@@ -42,16 +42,26 @@ public class TitleActivity extends Activity {
 		btnFoil = (Button) findViewById(R.id.foil_btn);
 		btnEpee = (Button) findViewById(R.id.epee_btn);
 		btnSaber = (Button) findViewById(R.id.saber_btn);
+		btnQuit = (Button) findViewById(R.id.quit_btn);
 		
 		btnFoil.setOnClickListener(notAvail);
 		btnSaber.setOnClickListener(notAvail);
+		
 
 		btnEpee.setOnClickListener(new OnClickListener(){
 			 @Override
 			  public void onClick(View v) {
-						Intent createIntent = new Intent(getApplicationContext(), BodyPartSelect.class);
+				 fencing.referee.data.MatchInfo.epeeSelect = true;
+						Intent createIntent = new Intent(getApplicationContext(), FencerPromptEpee.class);
 						startActivity(createIntent);
 
+			  }
+		});
+		
+		btnQuit.setOnClickListener(new OnClickListener(){
+			 @Override
+			  public void onClick(View v) {
+				finish();
 			  }
 		});
 	}
