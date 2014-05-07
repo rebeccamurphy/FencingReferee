@@ -52,6 +52,7 @@ public class TitleActivity extends Activity {
 			 @Override
 			  public void onClick(View v) {
 				 fencing.referee.data.MatchInfo.epeeSelect = true;
+				 		finish();
 						Intent createIntent = new Intent(getApplicationContext(), FencerPromptEpee.class);
 						startActivity(createIntent);
 

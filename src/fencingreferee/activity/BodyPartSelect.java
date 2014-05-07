@@ -69,10 +69,12 @@ public class BodyPartSelect extends Activity{
 		  }
 	
 	public void reset(){
+		finish();
 		Intent createIntent = new Intent(getApplicationContext(), TitleActivity.class);
 		startActivity(createIntent);
 	}
 	public void selectNext(){
+		finish();
 		Intent createIntent = new Intent(getApplicationContext(), BodyPartSelect.class);
 		startActivity(createIntent);
 	}
@@ -109,12 +111,12 @@ public class BodyPartSelect extends Activity{
 		}
 	}
 	public void epeeJudgeDialog(String fencerAttacking){
-		AlertDialog.Builder judgement = new AlertDialog.Builder(getApplicationContext());
+		AlertDialog.Builder judgement = new AlertDialog.Builder(BodyPartSelect.this);
 		judgement.setTitle("Who won?");
 		if (fencing.referee.data.MatchInfo.leftFencer || fencing.referee.data.MatchInfo.rightFencer )
-			judgement.setMessage(fencerAttacking + "gets a point because everywhere is a legal hit in Epee!");
+			judgement.setMessage(fencerAttacking + " gets a point because everywhere is a legal hit in Epee!");
 		else if (fencing.referee.data.MatchInfo.bothFencer)
-			judgement.setMessage(fencerAttacking + "get a point because everywhere is a legal hit in Epee, and when both fencers hit at the same time they both get a point.");
+			judgement.setMessage(fencerAttacking + " get a point because everywhere is a legal hit in Epee, and when both fencers hit at the same time they both get a point.");
 		
 		judgement.setPositiveButton("Judge again?", new DialogInterface.OnClickListener() {
 		    public void onClick(DialogInterface dialog, int whichButton) {
@@ -126,7 +128,7 @@ public class BodyPartSelect extends Activity{
 				   finish();
 			   }
 		   });
-		judgement.show();	
+		judgement.create().show();	
 
 
 	}
