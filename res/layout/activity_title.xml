@@ -1,8 +1,9 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
     tools:context=".TitleActivity" >
 
     <!--
@@ -10,7 +11,7 @@
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc.
     -->
-
+	<!-- 
     <TextView
         android:id="@+id/fullscreen_content"
         android:layout_width="match_parent"
@@ -21,11 +22,11 @@
         android:textColor="#33b5e5"
         android:textSize="50sp"
         android:textStyle="bold" />
-
-    <!--
+	
+    
          This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows.
-    -->
+    
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -46,10 +47,38 @@
                 android:id="@+id/dummy_button"
                 style="?buttonBarButtonStyle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:text="@string/dummy_button" />
         </LinearLayout>
-    </FrameLayout>
 
-</FrameLayout>
+    </FrameLayout>
+-->
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fencinglogo"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/foil_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/foil_str" />
+
+    <Button
+        android:id="@+id/epee_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/epee_str" />
+
+    <Button
+        android:id="@+id/saber_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/saber_str" />
+
+</LinearLayout>
