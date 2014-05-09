@@ -30,14 +30,16 @@ public class BodyPartSelect extends Activity{
 		
 		addListenerOnButton();
 		 if (fencing.referee.data.MatchInfo.rightFencer)
-			 Toast.makeText(getApplicationContext(), "Enter where Right Hit", Toast.LENGTH_SHORT).show();
+			 Toast.makeText(getApplicationContext(), "Enter where Right Hit", Toast.LENGTH_LONG).show();
 		  else if (fencing.referee.data.MatchInfo.leftFencer)
-			  Toast.makeText(getApplicationContext(), "Enter where Left Hit", Toast.LENGTH_SHORT).show();
-		  else if (fencing.referee.data.MatchInfo.bothFencer && fencing.referee.data.MatchInfo.numHits >0)
-			  Toast.makeText(getApplicationContext(), "Enter where Right Hit", Toast.LENGTH_SHORT).show();
-		  else if (fencing.referee.data.MatchInfo.bothFencer && fencing.referee.data.MatchInfo.numHits <=0){
+			  Toast.makeText(getApplicationContext(), "Enter where Left Hit", Toast.LENGTH_LONG).show();
+		  else if (fencing.referee.data.MatchInfo.bothFencer && fencing.referee.data.MatchInfo.numHits <=0)
+			  Toast.makeText(getApplicationContext(), "Enter where Right Hit", Toast.LENGTH_LONG).show();
+		  else if (fencing.referee.data.MatchInfo.bothFencer && fencing.referee.data.MatchInfo.numHits >0){
 			  //alert "Judging Next Hit"
-			  Toast.makeText(getApplicationContext(), "Now Enter Left Hit", Toast.LENGTH_SHORT).show();
+			  
+			  Toast.makeText(getApplicationContext(), "Now Enter Left Hit", Toast.LENGTH_LONG).show();
+			 
 		  }
 	}
 	
@@ -58,7 +60,7 @@ public class BodyPartSelect extends Activity{
 				  else if (fencing.referee.data.MatchInfo.bothFencer && fencing.referee.data.MatchInfo.numHits <0){
 					  fencing.referee.data.MatchInfo.numHits++;
 					  //alert "Judging Next Hit"
-					  //Toast.makeText(getApplicationContext(), "Now enter Left Hit", Toast.LENGTH_SHORT).show();
+					  //Toast.makeText(getApplicationContext(), "Now enter Left Hit", Toast.LENGTH_LONG).show();
 					  selectNext();
 				  }
 					  
@@ -69,12 +71,12 @@ public class BodyPartSelect extends Activity{
 		  }
 	
 	public void reset(){
-		finish();
+		
 		Intent createIntent = new Intent(getApplicationContext(), TitleActivity.class);
 		startActivity(createIntent);
 	}
 	public void selectNext(){
-		finish();
+		//finish();
 		Intent createIntent = new Intent(getApplicationContext(), BodyPartSelect.class);
 		startActivity(createIntent);
 	}
@@ -125,7 +127,7 @@ public class BodyPartSelect extends Activity{
 	    });
 		judgement.setNegativeButton("Quit App?", new DialogInterface.OnClickListener() {
 			   public void onClick(DialogInterface dialog, int whichButton) {
-				   finish();
+				   System.exit(0);
 			   }
 		   });
 		judgement.create().show();	

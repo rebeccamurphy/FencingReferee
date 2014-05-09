@@ -43,7 +43,6 @@ public class FencerPromptEpee extends Activity{
 				else if (String.valueOf(fencerSelecter.getSelectedItem()).equals("Both hit at same time")){
 					fencing.referee.data.MatchInfo.bothFencer = true;
 				}
-				finish();
 				Intent createIntent = new Intent(getApplicationContext(), BodyPartSelect.class);
 				startActivity(createIntent);
 		

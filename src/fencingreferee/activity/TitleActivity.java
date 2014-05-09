@@ -52,7 +52,7 @@ public class TitleActivity extends Activity {
 			 @Override
 			  public void onClick(View v) {
 				 fencing.referee.data.MatchInfo.epeeSelect = true;
-				 		finish();
+				 		
 						Intent createIntent = new Intent(getApplicationContext(), FencerPromptEpee.class);
 						startActivity(createIntent);
 
@@ -62,7 +62,7 @@ public class TitleActivity extends Activity {
 		btnQuit.setOnClickListener(new OnClickListener(){
 			 @Override
 			  public void onClick(View v) {
-				finish();
+				 System.exit(0);
 			  }
 		});
 	}

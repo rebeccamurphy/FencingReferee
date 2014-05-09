@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#F0F0F0"
     android:orientation="vertical"
     tools:context=".BodyPartSelect" >
 
@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textColor="#000000"
         android:text="Which fencer hit first?"
         android:textSize="@dimen/testSize" />
 
